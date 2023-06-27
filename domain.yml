@@ -1,0 +1,58 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - search_country
+  - hotel_flight_booking
+  - attraction
+
+actions:
+  - action_search_country
+  - action_return_hotel_flight_booking
+  - action_return_attraction
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_search_country:
+  - text: "Places to visit"
+    image: "https://pixabay.com/images/search/destination/"
+
+  utter_hotel_flight_booking:
+  - text: "Some sample  hotels in delhi for India"
+    image: "https://cdn1.goibibo.com/voy_mmt/t_fs/htl-imgs/200701241130593567-64c44f18ce7611e78a1a0a9df65c8753.jpg"
+  #- text: "https://cdn1.goibibo.com/voy_ing/t_fs/64267af40c7711eaa3790242ac110004.jpg"
+   
+  utter_attraction:
+  - text: "Attractions in various country"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+entities:
+ - country
